@@ -1,7 +1,154 @@
-// using capitelletter for the hotcode
+/* When to use JavaScript "const" ?
+Always declare a variable with "const" when you know that the value should not be changed.
+
+Use "const" when you declare:
+
+A new Array
+A new Object
+A new Function
+A new RegExp 
+
+
+Constant Objects and Arrays
+The keyword "const" is a little misleading.
+
+It does not define a constant value. It defines a constant reference to a value.
+
+Because of this you can NOT:
+
+Reassign a constant value
+Reassign a constant array
+Reassign a constant object
+But you CAN:
+
+Change the elements of constant array
+Change the properties of constant object */
+
+
+// using capitel letter for the hotcode
 
 const USERNAME = "hello@gmail.com";
 const PASSWORD = "123@123@One"
+
+// Constant Arrays
+
+// You can change the elements of a constant array:
+
+Example
+// You can create a constant array:
+const cars = ["Saab", "Volvo", "BMW"];
+
+// You can change an element:
+cars[0] = "Toyota";
+
+// You can add an element:
+cars.push("Audi");
+
+// But you can NOT reassign the array:
+
+Example
+const cars = ["Saab", "Volvo", "BMW"];
+
+cars = ["Toyota", "Volvo", "Audi"];    // ERROR
+
+// Constant Objects
+
+// You can change the properties of a constant object:
+
+Example
+// You can create a "const" object:
+const car = {type:"Fiat", model:"500", color:"white"};
+
+// You can change a property:
+car.color = "red";
+
+// You can add a property:
+car.owner = "Johnson";
+
+// But you can NOT reassign the object:
+
+Example
+const car = {type:"Fiat", model:"500", color:"white"};
+
+car = {type:"Volvo", model:"EX60", color:"red"};    // ERROR
+
+
+/* Cannot be Reassigned
+
+A variable defined with the "const" keyword cannot be reassigned: */
+
+// Example
+
+const PI = 3.141592653589793;
+PI = 3.14;      // This will give an error
+PI = PI + 10;   // This will also give an error
+console.log('PI: ', PI);
+
+
+/* Must be Assigned
+
+JavaScript "const" variables must be assigned a value when they are declared */
+
+// Correct
+
+const Pi = 3.14159265359;
+
+
+// Incorrect
+
+// const He ;
+// He = 3.14159265359;
+
+// Meaning: Using a "const" variable before it is declared will result in a ReferenceError:
+
+Example
+alert (carName);
+const carName = "Volvo";
+
+// Redeclaring an existing var or let variable to const, in the same scope, is not allowed:
+
+Example
+var x = 2;     // Allowed
+const x = 2;   // Not allowed
+
+{
+let x = 2;     // Allowed
+const X = 2;   // Not allowed
+}
+
+{
+const x = 2;   // Allowed
+const X = 2;   // Not allowed
+}
+// Reassigning an existing const variable, in the same scope, is not allowed:
+
+Example
+const x = 2;     // Allowed
+x = 2;           // Not allowed
+var x = 2;       // Not allowed
+let x = 2;       // Not allowed
+const x = 2;     // Not allowed
+
+{
+ // const x = 2;   // Allowed
+  x = 2;         // Not allowed
+  var x = 2;     // Not allowed
+  //let x = 2;     // Not allowed
+  const x = 2;   // Not allowed
+}
+// Redeclaring a variable with const, in another scope, or in another block, is allowed:
+
+Example
+const x = 2;       // Allowed
+
+{
+  const x = 3;   // Allowed
+}
+
+{
+  const x = 4;   // Allowed
+}
+
 
 // COLORS
 const WHITE_COLOR = "#FFFFFF";
@@ -99,5 +246,3 @@ const ALICE_BLUE_COLOR = "#F0F8FF";
 const GHOST_WHITE_COLOR = "#F8F8FF";
 const AZURE_COLOR = "#F0FFFF";
 const SNOW_COLOR = "#FFFAFA";
-
-

@@ -5,6 +5,7 @@ let bookName;
 bookName = "Harry Potter"
 
 // Logging the output
+
 // console.log(bookName);
 
 /* 
@@ -25,3 +26,31 @@ let school = "DHSS",
     student2 = student1
 
 console.log(school, "\t", subjects, "\n", marks, "\n", student1, "\t", student2, "\t", student3);
+
+
+// One Statement, Many Variables
+
+// Start the statement with "let" and separate the variables by comma:
+
+let person = "John Doe", carName = "Volvo", price = 200;
+
+
+// A variable declared without a value will have the value undefined.
+
+let carname;
+
+console.log('carName: ', carname);
+
+
+// Re-Declaring JavaScript Variables
+
+// If you re-declare a JavaScript variable declared with "var", it will not lose its value.
+
+var CarName = "Volvo";
+var CarName = "car"
+
+console.log('CarName: ', CarName);
+
+
+// You cannot re-declare a variable declared with "let" or "const".
+

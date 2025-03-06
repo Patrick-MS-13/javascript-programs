@@ -17,7 +17,7 @@ let e = +c + +d;   //this method is called unary +
 console.log('e: ', e);
 
 
-// binary  = + , - , * , / , % , **   ( % = modulo operator it gives the reminder number after division )
+// binary  = + , - , * , / , % , **  ( % = modulo operator it gives the reminder number after division )
 
 /* 
 (** = is the exponentiation operator used to raise a number to the power of another number

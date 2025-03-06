@@ -23,3 +23,16 @@ let embed = `1 + 2 = ${1+2}`;
 embed = `1 + 2 = ${intro}`;
 
 console.log(embed)
+
+// You can also add strings, but strings will be concatenated:
+
+let x = "John" + " " + "Doe";
+console.log('x: ', x);
+
+
+let y = "5" + 2 + 3;
+console.log('y: ', y); //output  523
+
+let z = 2 + 3 + "5";
+console.log('z: ', z);  //output  55
+
